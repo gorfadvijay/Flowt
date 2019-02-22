@@ -21,7 +21,6 @@ button, input {
   z-index: 3;
   height: 60px;
   width: 100%;
-  -webkit-transition: 300ms ease;
   transition: 300ms ease; }
 
 .brand {
@@ -31,7 +30,7 @@ button, input {
   font-weight: 500;
   padding-left: 1rem; }
   .brand span {
-    font-size: .9em;
+    font-size: 1.5em;
     font-weight: 700; }
   .brand img {
     vertical-align: middle;
@@ -42,7 +41,6 @@ button, input {
   display: none;
   position: relative;
   float: right;
-  -webkit-transition: 200ms ease;
   transition: 200ms ease;
   font-weight: 300;
   height: 60px; }
@@ -61,7 +59,6 @@ button, input {
       color: #fff;
       padding: 0 1em; }
       .top-menu li a:hover {
-        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0)));
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)); }
 
 .mobile-open {
@@ -90,10 +87,7 @@ button, input {
     display: block;
     position: absolute;
     left: calc(0.5rem - 1px);
-    -webkit-transition: top 150ms ease-out 150ms, bottom 150ms ease-out 150ms, opacity 150ms ease 75ms, -webkit-transform 150ms ease-in;
-    transition: top 150ms ease-out 150ms, bottom 150ms ease-out 150ms, opacity 150ms ease 75ms, -webkit-transform 150ms ease-in;
-    transition: transform 150ms ease-in, top 150ms ease-out 150ms, bottom 150ms ease-out 150ms, opacity 150ms ease 75ms;
-    transition: transform 150ms ease-in, top 150ms ease-out 150ms, bottom 150ms ease-out 150ms, opacity 150ms ease 75ms, -webkit-transform 150ms ease-in; }
+    transition: transform 150ms ease-in, top 150ms ease-out 150ms, bottom 150ms ease-out 150ms, opacity 150ms ease 75ms; }
     .hamburger-btn .hamburger-line:first-child {
       top: 0.75rem; }
     .hamburger-btn .hamburger-line:nth-child(2) {
@@ -102,26 +96,20 @@ button, input {
       bottom: 0.75rem; }
 
 .hamburger-cross .hamburger-line {
-  -webkit-transition: top 150ms ease-in, bottom 150ms ease-in, opacity 150ms ease 75ms, -webkit-transform 150ms ease-out 150ms;
-  transition: top 150ms ease-in, bottom 150ms ease-in, opacity 150ms ease 75ms, -webkit-transform 150ms ease-out 150ms;
-  transition: transform 150ms ease-out 150ms, top 150ms ease-in, bottom 150ms ease-in, opacity 150ms ease 75ms;
-  transition: transform 150ms ease-out 150ms, top 150ms ease-in, bottom 150ms ease-in, opacity 150ms ease 75ms, -webkit-transform 150ms ease-out 150ms; }
+  transition: transform 150ms ease-out 150ms, top 150ms ease-in, bottom 150ms ease-in, opacity 150ms ease 75ms; }
   .hamburger-cross .hamburger-line:first-child {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
     top: calc(50% - 1px); }
   .hamburger-cross .hamburger-line:nth-child(2) {
     top: calc(50% - 1px);
     opacity: 0; }
   .hamburger-cross .hamburger-line:last-child {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
     bottom: calc(50% - 1px); }
 
 .scroll {
   background: white;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); }
   .scroll .top-menu li a, .scroll .brand {
     color: black; }
   .scroll .hamburger-line {
@@ -139,7 +127,7 @@ button, input {
   color: #fff;
   display: table;
   width: 100%;
-  text-align: center;
+  text-align: left;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2); }
   .hero:after {
     content: "";
@@ -148,13 +136,13 @@ button, input {
     left: 0;
     right: 0;
     bottom: 0;
-    background: -webkit-gradient(linear, left top, right bottom, from(#28e), to(#e14));
     background: linear-gradient(to bottom right, #28e, #e14);
     opacity: 0.9;
     z-index: -1; }
   .hero h1 {
-    font-size: 4em;
-    margin-bottom: 1rem; }
+    font-size: 8em;
+    margin-bottom: 1rem;
+    margin-left: 20%; }
   .hero p {
     font-size: 2em;
     max-width: 80%;
@@ -191,6 +179,9 @@ a {
   height: 100%;
   vertical-align: middle; }
 
+.zx {
+  font-style: 3.5em; }
+
 .main {
   background: #f8f8f8; }
   .main .row, .main .tab-row {
@@ -219,7 +210,6 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: -webkit-gradient(linear, left top, right bottom, from(#ee8822), to(#11eebb));
     background: linear-gradient(to bottom right, #ee8822, #11eebb);
     opacity: 0.9;
     z-index: -1; }
@@ -263,14 +253,11 @@ button.cta {
   color: black;
   border: none;
   cursor: pointer;
-  -webkit-transition: 200ms ease;
   transition: 200ms ease;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 2px; }
   button.cta:hover {
     color: #e14;
-    -webkit-box-shadow: 0 0.25em 10px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0.25em 10px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 0.25em 10px rgba(0, 0, 0, 0.2); }
 
 /*# sourceMappingURL=style.css.map */
