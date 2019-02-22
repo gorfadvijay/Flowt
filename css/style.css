@@ -21,6 +21,7 @@ button, input {
   z-index: 3;
   height: 60px;
   width: 100%;
+  -webkit-transition: 300ms ease;
   transition: 300ms ease; }
 
 .brand {
@@ -41,6 +42,7 @@ button, input {
   display: none;
   position: relative;
   float: right;
+  -webkit-transition: 200ms ease;
   transition: 200ms ease;
   font-weight: 300;
   height: 60px; }
@@ -59,6 +61,7 @@ button, input {
       color: #fff;
       padding: 0 1em; }
       .top-menu li a:hover {
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0)));
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)); }
 
 .mobile-open {
@@ -87,7 +90,10 @@ button, input {
     display: block;
     position: absolute;
     left: calc(0.5rem - 1px);
-    transition: transform 150ms ease-in, top 150ms ease-out 150ms, bottom 150ms ease-out 150ms, opacity 150ms ease 75ms; }
+    -webkit-transition: top 150ms ease-out 150ms, bottom 150ms ease-out 150ms, opacity 150ms ease 75ms, -webkit-transform 150ms ease-in;
+    transition: top 150ms ease-out 150ms, bottom 150ms ease-out 150ms, opacity 150ms ease 75ms, -webkit-transform 150ms ease-in;
+    transition: transform 150ms ease-in, top 150ms ease-out 150ms, bottom 150ms ease-out 150ms, opacity 150ms ease 75ms;
+    transition: transform 150ms ease-in, top 150ms ease-out 150ms, bottom 150ms ease-out 150ms, opacity 150ms ease 75ms, -webkit-transform 150ms ease-in; }
     .hamburger-btn .hamburger-line:first-child {
       top: 0.75rem; }
     .hamburger-btn .hamburger-line:nth-child(2) {
@@ -96,20 +102,26 @@ button, input {
       bottom: 0.75rem; }
 
 .hamburger-cross .hamburger-line {
-  transition: transform 150ms ease-out 150ms, top 150ms ease-in, bottom 150ms ease-in, opacity 150ms ease 75ms; }
+  -webkit-transition: top 150ms ease-in, bottom 150ms ease-in, opacity 150ms ease 75ms, -webkit-transform 150ms ease-out 150ms;
+  transition: top 150ms ease-in, bottom 150ms ease-in, opacity 150ms ease 75ms, -webkit-transform 150ms ease-out 150ms;
+  transition: transform 150ms ease-out 150ms, top 150ms ease-in, bottom 150ms ease-in, opacity 150ms ease 75ms;
+  transition: transform 150ms ease-out 150ms, top 150ms ease-in, bottom 150ms ease-in, opacity 150ms ease 75ms, -webkit-transform 150ms ease-out 150ms; }
   .hamburger-cross .hamburger-line:first-child {
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
     top: calc(50% - 1px); }
   .hamburger-cross .hamburger-line:nth-child(2) {
     top: calc(50% - 1px);
     opacity: 0; }
   .hamburger-cross .hamburger-line:last-child {
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
     bottom: calc(50% - 1px); }
 
 .scroll {
   background: white;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); }
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); }
   .scroll .top-menu li a, .scroll .brand {
     color: black; }
   .scroll .hamburger-line {
@@ -136,6 +148,7 @@ button, input {
     left: 0;
     right: 0;
     bottom: 0;
+    background: -webkit-gradient(linear, left top, right bottom, from(#28e), to(#e14));
     background: linear-gradient(to bottom right, #28e, #e14);
     opacity: 0.9;
     z-index: -1; }
@@ -180,7 +193,9 @@ a {
   vertical-align: middle; }
 
 .zx {
-  font-style: 3.5em; }
+  font-size: 3.5em;
+  margin-bottom: -40px;
+  text-align: center; }
 
 .main {
   background: #f8f8f8; }
@@ -210,6 +225,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
+    background: -webkit-gradient(linear, left top, right bottom, from(#ee8822), to(#11eebb));
     background: linear-gradient(to bottom right, #ee8822, #11eebb);
     opacity: 0.9;
     z-index: -1; }
@@ -253,11 +269,21 @@ button.cta {
   color: black;
   border: none;
   cursor: pointer;
+  -webkit-transition: 200ms ease;
   transition: 200ms ease;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 2px; }
   button.cta:hover {
     color: #e14;
-    box-shadow: 0 0.25em 10px rgba(0, 0, 0, 0.2); }
+    -webkit-box-shadow: 0 0.25em 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0.25em 10px rgba(0, 0, 0, 0.2); }
+
+.chatbot {
+  height: 150px;
+  width: 300px;
+  background-color: rgba(81, 6, 219, 0.9);
+  border-radius: 15px;
+  font-size: 50px; }
 
 /*# sourceMappingURL=style.css.map */
